@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1em;
+  padding: 1em;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+.gallery-item p {
+  margin: 0;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  margin-top: auto; 
+}
+
+/* Lightbox-Stil */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
+.lightbox .info {
+  color: white;
+  text-align: center;
+}
+
+.lightbox .nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.lightbox .nav-buttons button {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+.material-icons {
+  color: rgb(255, 255, 255);
+  user-select: none;
+  font-size: 80px;
+}
+
+
+.lightbox .nav-buttons button {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 5em!important;
+  width: 50px;  /* Feste Breite */
+  height: 50px; /* Feste Höhe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox .nav-buttons button span.material-icons {
+  font-size: 8vh !important;
+  width: 12vh!important;
+  height: 12vh!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

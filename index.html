@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartoon Galerie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h1>Cartoon Galerie</h1>
+  </header>
+
+  <main>
+    <section class="gallery" id="gallery">
+      <!-- Dynamisch eingefügte Cartoons -->
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <div class="nav-buttons">
+      <button id="prev"><span class="material-icons">arrow_left</span></button>
+      <button id="next"><span class="material-icons">arrow_right</span></button>
+    </div>
+    <span class="close" id="close"><span class="material-icons">close</span></span>
+    
+  
+    <img id="lightbox-img" src="" alt="">
+    <div class="info">
+      <h2 id="lightbox-title"></h2>
+      <p id="lightbox-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
