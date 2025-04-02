@@ -4,20 +4,48 @@ body {
   background: #f2f2f2;
 }
 header {
-  background-color: #222;
+  width: 100%;
+  min-height: 300px; /* Füge eine Mindesthöhe hinzu, damit das Muster sichtbar ist */
   color: #fff;
   padding: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* Für den Hintergrund wichtig */
+  
+  --s: 140px; /* control the size */
+  --c1: #200202;
+  --c2: #2503171a;
+
+  --_g: #0000 25%, #0008 47%, var(--c1) 53% 147%, var(--c2) 153% 247%,
+    var(--c1) 253% 347%, var(--c2) 353% 447%, var(--c1) 453% 547%, #0008 553%,
+    #0000 575%;
+  --_s: calc(25% / 3) calc(25% / 4) at 50%;
+  background: radial-gradient(var(--_s) 100%, var(--_g)),
+    radial-gradient(var(--_s) 100%, var(--_g)) calc(var(--s) / 2)
+      calc(3 * var(--s) / 4),
+    radial-gradient(var(--_s) 0, var(--_g)) calc(var(--s) / 2) 0,
+    radial-gradient(var(--_s) 0, var(--_g)) 0 calc(3 * var(--s) / 4),
+    repeating-linear-gradient(
+      90deg,
+      #180101 calc(25% / -6) calc(25% / 6),
+      #4b0101 0 calc(25% / 2)
+    );
+  background-size: var(--s) calc(3 * var(--s) / 2);
 }
 
 .header-icon {
   width: 100px;
   height: 100px;
   margin-top: 60px;
+  position: relative; /* Damit das Icon über dem Muster liegt */
+  z-index: 1;
+}
 
+header h1 {
+  position: relative; /* Damit die Überschrift über dem Muster liegt */
+  z-index: 1;
 }
 
 
