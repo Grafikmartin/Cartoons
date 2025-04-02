@@ -14,7 +14,7 @@ const presetCartoons = [
   { title: "Nikolaus", src: "cartoons/nikolaus.png", description: "" },
   { title: "Ostern", src: "cartoons/ostern.png", description: "" },
   { title: "Überraschung", src: "cartoons/pause.png", description: "" },
-  { title: "Prügelshop", src: "cartoons/pruegelshop.png", description: "" },
+  { title: "Geschäftsidee", src: "cartoons/pruegelshop.png", description: "" },
   { title: "Rache", src: "cartoons/rache.png", description: "" },
   { title: "Selbstverwertung", src: "cartoons/Russia.png", description: "" },
   { title: "Streetfood", src: "cartoons/Streetfood.png", description: "" },
