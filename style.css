@@ -3,13 +3,23 @@ body {
   margin: 0;
   background: #f2f2f2;
 }
-
 header {
   background-color: #222;
   color: #fff;
   padding: 1em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.header-icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 60px;
+
+}
+
 
 .gallery {
   display: grid;
@@ -129,4 +139,21 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+footer h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+footer p {
+  margin: 0.5em 0;
+  line-height: 1.6;
 }
