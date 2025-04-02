@@ -5,13 +5,13 @@ const presetCartoons = [
   { title: "Bürgerkrieg", src: "cartoons/Buergerkieg.png", description: "" },
   { title: "Diskutieren", src: "cartoons/Diskutieren.png", description: "" },
   { title: "Donuts", src: "cartoons/Donuts.png", description: "" },
-  { title: "Dubai", src: "cartoons/Dubai.png", description: "" },
+  { title: "Hype", src: "cartoons/Dubai.png", description: "" },
   { title: "Gesundheitsversorgung", src: "cartoons/Gesundheitsversorgung.png", description: "" },
   { title: "Go Away", src: "cartoons/go-away.png", description: "" },
   { title: "Gute Preise", src: "cartoons/gute_Preise.png", description: "" },
   { title: "Herbst", src: "cartoons/herbst.png", description: "" },
   { title: "Installateurmangel", src: "cartoons/Installateur.png", description: "" },
-  { title: "Nikolaus", src: "cartoons/nikolaus.png", description: "" },
+  { title: "Architekturbanausin", src: "cartoons/nikolaus.png", description: "" },
   { title: "Ostern", src: "cartoons/ostern.png", description: "" },
   { title: "Überraschung", src: "cartoons/pause.png", description: "" },
   { title: "Geschäftsidee", src: "cartoons/pruegelshop.png", description: "" },
@@ -66,7 +66,15 @@ function addCartoonToGallery(title, imgSrc, description) {
 }
 
 function showInLightbox(index) {
-  if (index < 0 || index >= currentCartoons.length) return;
+  // Wenn wir über das Ende hinausgehen, springen wir zum Anfang
+  if (index >= currentCartoons.length) {
+      index = 0;
+  }
+  // Wenn wir unter den Anfang gehen, springen wir zum Ende
+  if (index < 0) {
+      index = currentCartoons.length - 1;
+  }
+
   const cartoon = currentCartoons[index];
   lightboxImg.src = cartoon.imgSrc;
   lightboxTitle.textContent = cartoon.title;
