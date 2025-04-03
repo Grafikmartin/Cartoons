@@ -261,3 +261,44 @@ footer p {
     gap: 1.5em;
   }
 }
+/* Füge diese Media Queries zu deinem CSS hinzu oder aktualisiere die bestehenden */
+
+@media only screen and (max-width: 768px) {
+  .lightbox .nav-buttons {
+    /* Buttons nach unten verschieben */
+    top: auto;
+    bottom: 20%;
+    transform: none;
+  }
+
+  .lightbox .nav-buttons button span.material-icons {
+    /* Buttons kleiner machen */
+    font-size: 5vh !important;
+    width: 8vh !important;
+    height: 8vh !important;
+  }
+
+  .lightbox img {
+    /* Mehr Platz für die Buttons */
+    max-height: 70%;
+    margin-bottom: 2em;
+  }
+}
+
+/* Noch kleinere Geräte */
+@media only screen and (max-width: 480px) {
+  .lightbox .nav-buttons button span.material-icons {
+    /* Noch kleiner für sehr kleine Geräte */
+    font-size: 4vh !important;
+    width: 6vh !important;
+    height: 6vh !important;
+  }
+
+  .lightbox .nav-buttons {
+    bottom: 15%;
+  }
+
+  .lightbox img {
+    max-height: 60%;
+  }
+}
