@@ -11,7 +11,7 @@ const presetCartoons = [
   { title: "Berufswunsch", src: "cartoons/Beste-Bilder-greve_katharina_28_ausbildungfachkraefte_bearb-625x375.jpg", description: "" },
   { title: "Sonnenbaden for Future", src: "cartoons/sonnenbaden_for_future.png", description: "" },
   { title: "Die Rettung", src: "cartoons/rettung.png", description: "" },
-  { title: "Neues Showbusiness", src: "33150878-waermepumpen-im-fokus-cartoon-von-nel-1r70.jpg", description: "" },
+  { title: "Neues Showbusiness", src: "cartoons/33150878-waermepumpen-im-fokus-cartoon-von-nel-1r70.jpg", description: "" },
   { title: "Bildung", src: "cartoons/SelteneErden.png", description: "" },
   { title: "Platzhirsch", src: "cartoons/Platzhirsch.png", description: "" },
   { title: "Belagerung", src: "cartoons/Belagerung.jpg", description: "" },
