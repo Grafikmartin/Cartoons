@@ -30,11 +30,11 @@ const presetCartoons = [
   { title: "Neuer Trend, KI-Tropfen", src: "cartoons/Trend.png", description: "" },
   { title: "Zu Befehl!", src: "cartoons/Waesche.png", description: "" },
   { title: "Neue Traditionen", src: "cartoons/Weihnachten.png", description: "" },
-  { title: "Irrglaube und Richtigstellung", src: "cartoons/wennAFD.png", description: "" }
+  { title: "Irrglaube und Konsequenzen", src: "cartoons/wennAFD.png", description: "" }
 ];
 
 let displayedCount = 15;
-const incrementCount = 10;
+const incrementCount = 5;
 
 window.addEventListener("DOMContentLoaded", () => {
     // Initial nur die ersten 25 Bilder laden
@@ -107,7 +107,7 @@ function addCartoonToGallery(title, imgSrc, description) {
   `;
   div.querySelector("img").addEventListener("click", () => showInLightbox(index));
 
-  gallery.prepend(div);
+  gallery.appendChild(div);  // Hier wurde prepend durch appendChild ersetzt
   currentCartoons.push({ title, imgSrc, description });
 }
 
