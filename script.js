@@ -8,6 +8,7 @@ const presetCartoons = [
   { title: "Berufswunsch", src: "cartoons/Beste-Bilder-greve_katharina_28_ausbildungfachkraefte_bearb-625x375.jpg", description: "" },
   { title: "Sonnenbaden for Future", src: "cartoons/sonnenbaden_for_future.png", description: "" },
   { title: "Die Rettung", src: "cartoons/rettung.png", description: "" },
+  { title: "Neues Showbusiness", src: "33150878-waermepumpen-im-fokus-cartoon-von-nel-1r70.jpg", description: "" },
   { title: "Bildung", src: "cartoons/SelteneErden.png", description: "" },
   { title: "Platzhirsch", src: "cartoons/Platzhirsch.png", description: "" },
   { title: "Belagerung", src: "cartoons/Belagerung.jpg", description: "" },
@@ -152,20 +153,38 @@ function addCartoonToGallery(title, imgSrc, description) {
   currentCartoons.push({ title, imgSrc, description });
 }
 
+// Ersetze die showInLightbox Funktion mit dieser Version:
 function showInLightbox(index) {
   // Wenn wir über das Ende hinausgehen, springen wir zum Anfang
-  if (index >= currentCartoons.length) {
+  if (index >= presetCartoons.length) {
     index = 0;
   }
   // Wenn wir unter den Anfang gehen, springen wir zum Ende
   if (index < 0) {
-    index = currentCartoons.length - 1;
+    index = presetCartoons.length - 1;
   }
 
-  const cartoon = currentCartoons[index];
-  lightboxImg.src = cartoon.imgSrc;
+  const cartoon = presetCartoons[index];
+  lightboxImg.src = cartoon.src;
   lightboxTitle.textContent = cartoon.title;
   lightboxDescription.textContent = cartoon.description;
   currentIndex = index;
   lightbox.classList.add("active");
+}
+
+// Ändere die addCartoonToGallery Funktion:
+function addCartoonToGallery(title, imgSrc, description) {
+  const gallery = document.getElementById("gallery");
+  // Finde den Index im presetCartoons Array
+  const index = presetCartoons.findIndex(cartoon => cartoon.src === imgSrc);
+
+  const div = document.createElement("div");
+  div.className = "gallery-item";
+  div.innerHTML = `
+    <img src="${imgSrc}" alt="${title}" />
+    <p><strong>${title}</strong><br>${description}</p>
+  `;
+  div.querySelector("img").addEventListener("click", () => showInLightbox(index));
+
+  gallery.appendChild(div);
 }
