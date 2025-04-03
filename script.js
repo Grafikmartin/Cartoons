@@ -1,7 +1,8 @@
 const presetCartoons = [
-  
+  { title: "Diagnostik", src: "cartoons/Diagnostik.png", description: "" },
+  { title: "Bildung", src: "cartoons/SelteneErden.png", description: "" },  
   { title: "Platzhirsch", src: "cartoons/Platzhirsch.png", description: "" },
-  { title: "Belagerung", src: "cartoons/Belagerung.png", description: "" },
+  { title: "Belagerung", src: "cartoons/Belagerung.jpg", description: "" },
   { title: "Sicher ist sicher!", src: "cartoons/sicher_ist_sicher.png", description: "" },
   { title: "Durcheinander", src: "cartoons/Durcheinander.png", description: "" }, 
   { title: "Mehr als ein Spiel", src: "cartoons/Buergerkieg.png", description: "" },
@@ -15,6 +16,7 @@ const presetCartoons = [
   { title: "Installateurmangel", src: "cartoons/Installateur.png", description: "" },
   { title: "Architekturbanausin", src: "cartoons/nikolaus.png", description: "" },
   { title: "Ostern", src: "cartoons/ostern.png", description: "" },
+  { title: "Natur", src: "cartoons/Hilbring_Hoden-600x600.jpg", description: "" },
   { title: "Überraschung", src: "cartoons/pause.png", description: "" },
   { title: "Geschäftsidee", src: "cartoons/pruegelshop.png", description: "" },
   { title: "Beratung", src: "cartoons/Beratung.png", description: "" },
@@ -23,9 +25,10 @@ const presetCartoons = [
   { title: "Lieferkette", src: "cartoons/Streetfood.png", description: "" },
   { title: "Christliche Nächstenliebe", src: "cartoons/Valentinstag.png", description: "" },
   { title: "Trübsal", src: "cartoons/Besorgt.png", description: "" },
+  { title: "Neuer Trend, KI-Tropfen", src: "cartoons/Trend.png", description: "" },
   { title: "Zu Befehl!", src: "cartoons/Waesche.png", description: "" },
   { title: "Neue Traditionen", src: "cartoons/Weihnachten.png", description: "" },
-  { title: "Irrglaube", src: "cartoons/wennAFD.png", description: "" }
+  { title: "Irrglaube und Richtigstellung", src: "cartoons/wennAFD.png", description: "" }
 ];
 
 window.addEventListener("DOMContentLoaded", () => {
