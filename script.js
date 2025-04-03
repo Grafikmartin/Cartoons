@@ -19,6 +19,8 @@ const presetCartoons = [
   { title: "Natur", src: "cartoons/Hilbring_Hoden-600x600.jpg", description: "" },
   { title: "Überraschung", src: "cartoons/pause.png", description: "" },
   { title: "Geschäftsidee", src: "cartoons/pruegelshop.png", description: "" },
+  { title: "Wecker für Autofahrer", src: "cartoons/Wecker.png", description: "" },
+  { title: "Konferenz", src: "cartoons/Grolik_Webseite_Zoom-Konferenz-grolik.jpg", description: "" },
   { title: "Beratung", src: "cartoons/Beratung.png", description: "" },
   { title: "Rache", src: "cartoons/rache.png", description: "" },
   { title: "Selbstverwertung", src: "cartoons/Russia.png", description: "" },
@@ -31,11 +33,49 @@ const presetCartoons = [
   { title: "Irrglaube und Richtigstellung", src: "cartoons/wennAFD.png", description: "" }
 ];
 
+let displayedCount = 15;
+const incrementCount = 10;
+
 window.addEventListener("DOMContentLoaded", () => {
-  presetCartoons.reverse().forEach(cartoon => {
-    addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
-  });
+    // Initial nur die ersten 25 Bilder laden
+    loadCartoons(0, displayedCount);
+    addLoadMoreButton();
 });
+
+function loadCartoons(start, end) {
+    const cartoonsToLoad = presetCartoons.slice(start, end);
+    cartoonsToLoad.reverse().forEach(cartoon => {
+        addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
+    });
+}
+
+function addLoadMoreButton() {
+  const gallery = document.getElementById("gallery");
+  const loadMoreButton = document.createElement("button");
+  loadMoreButton.className = "cssbuttons-io-button";
+  loadMoreButton.innerHTML = `
+      Weitere Cartoons anzeigen
+      <div class="icon">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" fill="none"></path>
+          </svg>
+      </div>
+  `;
+  
+  loadMoreButton.addEventListener("click", () => {
+      const start = displayedCount;
+      displayedCount = Math.min(displayedCount + incrementCount, presetCartoons.length);
+      loadCartoons(start, displayedCount);
+      
+      if (displayedCount >= presetCartoons.length) {
+          loadMoreButton.style.display = "none";
+      }
+  });
+  
+  gallery.after(loadMoreButton);
+}
+
 
 let currentIndex = -1;
 let currentCartoons = [];
