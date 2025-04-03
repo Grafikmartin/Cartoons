@@ -50,31 +50,64 @@ function loadCartoons(start, end) {
 }
 
 function addLoadMoreButton() {
-  const gallery = document.getElementById("gallery");
+  // Entfernen Sie zuerst einen möglicherweise vorhandenen Button
+  const existingButton = document.querySelector('.cssbuttons-io-button');
+  if (existingButton) {
+    existingButton.remove();
+  }
+
+  const buttonContainer = document.createElement("div");
+  buttonContainer.style.width = "100%";
+  buttonContainer.style.textAlign = "center";
+  buttonContainer.style.margin = "2em 0";
+
   const loadMoreButton = document.createElement("button");
   loadMoreButton.className = "cssbuttons-io-button";
   loadMoreButton.innerHTML = `
-      Weitere Cartoons anzeigen
-      <div class="icon">
-          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0h24v24H0z" fill="none"></path>
-              <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" fill="none"></path>
-          </svg>
-      </div>
+    Weitere Cartoons anzeigen
+    <div class="icon">
+      <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" fill="none"></path>
+      </svg>
+    </div>
   `;
   
   loadMoreButton.addEventListener("click", () => {
-      const start = displayedCount;
-      displayedCount = Math.min(displayedCount + incrementCount, presetCartoons.length);
-      loadCartoons(start, displayedCount);
-      
-      if (displayedCount >= presetCartoons.length) {
-          loadMoreButton.style.display = "none";
-      }
+    const start = displayedCount;
+    displayedCount = Math.min(displayedCount + incrementCount, presetCartoons.length);
+    loadCartoons(start, displayedCount);
+    
+    if (displayedCount >= presetCartoons.length) {
+      loadMoreButton.style.display = "none";
+    }
   });
   
-  gallery.after(loadMoreButton);
+  buttonContainer.appendChild(loadMoreButton);
+  document.querySelector('main').appendChild(buttonContainer);
 }
+
+
+// Ändern Sie die loadCartoons Funktion
+function loadCartoons(start, end) {
+  const cartoonsToLoad = presetCartoons.slice(start, end);
+  cartoonsToLoad.forEach(cartoon => {  // Entfernen Sie .reverse()
+    addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
+  });
+}
+
+// Initialisierung
+window.addEventListener("DOMContentLoaded", () => {
+  // Lösche zuerst alle vorhandenen Cartoons
+  const gallery = document.getElementById("gallery");
+  gallery.innerHTML = '';
+  currentCartoons = [];
+  
+  // Lade die ersten 15 Bilder
+  loadCartoons(0, displayedCount);
+  addLoadMoreButton();
+});
+
 
 
 let currentIndex = -1;

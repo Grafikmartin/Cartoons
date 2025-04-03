@@ -1,10 +1,21 @@
+/* Grundlegende Reset-Regeln */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Fredoka', sans-serif;
-  margin: 0;
-  width: 100%;
-  height: 100%;
   --s: 100px;
-  /* control the size */
   --c1: #470116;
   --c2: #193650;
 
@@ -22,116 +33,66 @@ body {
       var(--_g),
       var(--c1) 96%) var(--c1);
   background-size: var(--s) var(--s);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
   width: 100%;
-  margin-left: 0%;
   min-height: 300px;
-  /* Füge eine Mindesthöhe hinzu, damit das Muster sichtbar ist */
   color: #fff;
   padding: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .header-icon {
   width: 120px;
   height: 120px;
   margin-top: 60px;
-margin-bottom: -20px;
+  margin-bottom: -20px;
   position: relative;
-  /* Damit das Icon über dem Muster liegt */
   z-index: 1;
-  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.9);}
+  text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.9);
+}
 
 header h1 {
   position: relative;
-  /* Damit die Überschrift über dem Muster liegt */
   z-index: 1;
   font-size: 3em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
-.cssbuttons-io-button {
-  background: #131b36;
-  color: white;
-  font-family: inherit;
-  padding: 0.35em;
-  padding-left: 1.2em;
-  font-size: 17px;
-  font-weight: 500;
-  border-radius: 0.9em;
-  border: none;
-  letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  box-shadow: inset 0 0 1.6em -0.6em #181024;
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-  cursor: pointer;
-  margin: 20px auto;
-}
 
-.cssbuttons-io-button .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: 0.7em;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #1b0f2c;
-  right: 0.3em;
-  transition: all 0.3s;
+main {
+  width: 100%;
+  flex: 1;
 }
-
-.cssbuttons-io-button:hover .icon {
-  width: calc(100% - 0.6em);
-}
-
-.cssbuttons-io-button .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #12083f;
-}
-
-.cssbuttons-io-button:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttons-io-button:active .icon {
-  transform: scale(0.95);
-}
-
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 3em;
   padding: 3em;
-
+  width: 100%;
+  box-sizing: border-box;
+  grid-auto-rows: minmax(min-content, max-content);
 }
 
 .gallery-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Fügen Sie diese Zeile hinzu */
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(2px, 2px, 2px, 0.5);
-  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   border: .5em solid #ffffff;
-  transition:  all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 100%;
 }
-
 .gallery-item:hover {
   transform: scale(1.05);
 }
@@ -141,14 +102,13 @@ header h1 {
   height: auto;
   display: block;
   object-fit: contain;
+  max-height: 300px;
 }
-
 
 .gallery-item p {
   margin: 0;
   padding: 0.5em 1em;
   font-size: 1rem;
-  margin-top: auto;
   text-align: center;
 }
 
@@ -198,7 +158,12 @@ header h1 {
   border: none;
   padding: 1em;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 5em !important;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lightbox .close {
@@ -216,23 +181,6 @@ header h1 {
   font-size: 80px;
 }
 
-
-.lightbox .nav-buttons button {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: none;
-  padding: 1em;
-  cursor: pointer;
-  font-size: 5em !important;
-  width: 50px;
-  /* Feste Breite */
-  height: 50px;
-  /* Feste Höhe */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .lightbox .nav-buttons button span.material-icons {
   font-size: 8vh !important;
   width: 12vh !important;
@@ -241,13 +189,59 @@ header h1 {
   justify-content: center;
   align-items: center;
 }
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  margin: 2em auto;
+  transition: all 0.3s ease;
+}
+
+.cssbuttons-io-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.5);
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: relative;
+  border-radius: 50%;
+  padding: 0.5em;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cssbuttons-io-button .icon svg {
+  color: rgba(0, 0, 0, 1);
+  width: 30px;
+  height: 30px;
+}
+
+.cssbuttons-io-button:active {
+  transform: scale(0.95);
+}
 
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 2em;
   text-align: center;
-  margin-top: 2em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 footer h3 {
@@ -261,9 +255,8 @@ footer p {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    height: 8vh;
-    margin-bottom: 12vh;
-    margin-top: 20vh;
+  .gallery {
+    padding: 1.5em;
+    gap: 1.5em;
   }
 }
