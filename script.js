@@ -1,5 +1,7 @@
 const presetCartoons = [
   
+  { title: "Platzhirsch", src: "cartoons/Platzhirsch.png", description: "" },
+  { title: "Belagerung", src: "cartoons/Belagerung.png", description: "" },
   { title: "Sicher ist sicher!", src: "cartoons/sicher_ist_sicher.png", description: "" },
   { title: "Durcheinander", src: "cartoons/Durcheinander.png", description: "" }, 
   { title: "Mehr als ein Spiel", src: "cartoons/Buergerkieg.png", description: "" },
@@ -15,6 +17,7 @@ const presetCartoons = [
   { title: "Ostern", src: "cartoons/ostern.png", description: "" },
   { title: "Überraschung", src: "cartoons/pause.png", description: "" },
   { title: "Geschäftsidee", src: "cartoons/pruegelshop.png", description: "" },
+  { title: "Beratung", src: "cartoons/Beratung.png", description: "" },
   { title: "Rache", src: "cartoons/rache.png", description: "" },
   { title: "Selbstverwertung", src: "cartoons/Russia.png", description: "" },
   { title: "Lieferkette", src: "cartoons/Streetfood.png", description: "" },
