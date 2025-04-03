@@ -1,5 +1,5 @@
 const presetCartoons = [
-  { title: "Profi durch und durch", src: "cartoons/Prinzip.png", description: "" },
+  { title: "Profi, durch und durch", src: "cartoons/Prinzip.png", description: "" },
   { title: "Der Fortschritt ist überall", src: "cartoons/Fortschritt.png", description: "" },
   { title: "Mitbewohnerstreit", src: "cartoons/Mitbewohnerstreit.png", description: "" },
   { title: "Neue Führungskräfte", src: "cartoons/Fuehrungskraefte.png", description: "" },
