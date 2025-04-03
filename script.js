@@ -1,6 +1,8 @@
 const presetCartoons = [
-  { title: "Produktvielfalt", src: "IMG-20250403-WA0001.jpg", description: "" },
+
+  
   { title: "Profi, durch und durch", src: "cartoons/Prinzip.png", description: "" },
+  { title: "Produktvielfalt", src: "cartoons/Produkt.jpg", description: "" },
   { title: "Der Fortschritt ist überall", src: "cartoons/Fortschritt.png", description: "" },
   { title: "Mitbewohnerstreit", src: "cartoons/Mitbewohnerstreit.png", description: "" },
   { title: "Neue Führungskräfte", src: "cartoons/Fuehrungskraefte.png", description: "" },
