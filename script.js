@@ -1,10 +1,18 @@
 const presetCartoons = [
+  { title: "Profi durch und durch", src: "cartoons/Prinzip.png", description: "" },
+  { title: "Der Fortschritt ist überall", src: "cartoons/Fortschritt.png", description: "" },
+  { title: "Mitbewohnerstreit", src: "cartoons/Mitbewohnerstreit.png", description: "" },
+  { title: "Neue Führungskräfte", src: "cartoons/Fuehrungskraefte.png", description: "" },
+  { title: "Strategie", src: "cartoons/Strategie.png", description: "" },
   { title: "Diagnostik", src: "cartoons/Diagnostik.png", description: "" },
-  { title: "Bildung", src: "cartoons/SelteneErden.png", description: "" },  
+  { title: "Berufswunsch", src: "cartoons/Beste-Bilder-greve_katharina_28_ausbildungfachkraefte_bearb-625x375.jpg", description: "" },
+  { title: "Sonnenbaden for Future", src: "cartoons/sonnenbaden_for_future.png", description: "" },
+  { title: "Die Rettung", src: "cartoons/rettung.png", description: "" },
+  { title: "Bildung", src: "cartoons/SelteneErden.png", description: "" },
   { title: "Platzhirsch", src: "cartoons/Platzhirsch.png", description: "" },
   { title: "Belagerung", src: "cartoons/Belagerung.jpg", description: "" },
   { title: "Sicher ist sicher!", src: "cartoons/sicher_ist_sicher.png", description: "" },
-  { title: "Durcheinander", src: "cartoons/Durcheinander.png", description: "" }, 
+  { title: "Durcheinander", src: "cartoons/Durcheinander.png", description: "" },
   { title: "Mehr als ein Spiel", src: "cartoons/Buergerkieg.png", description: "" },
   { title: "Besser machen. Einfach so.", src: "cartoons/Diskutieren.png", description: "" },
   { title: "Yummy!", src: "cartoons/Donuts.png", description: "" },
@@ -37,16 +45,16 @@ let displayedCount = 15;
 const incrementCount = 5;
 
 window.addEventListener("DOMContentLoaded", () => {
-    // Initial nur die ersten 25 Bilder laden
-    loadCartoons(0, displayedCount);
-    addLoadMoreButton();
+  // Initial nur die ersten 25 Bilder laden
+  loadCartoons(0, displayedCount);
+  addLoadMoreButton();
 });
 
 function loadCartoons(start, end) {
-    const cartoonsToLoad = presetCartoons.slice(start, end);
-    cartoonsToLoad.reverse().forEach(cartoon => {
-        addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
-    });
+  const cartoonsToLoad = presetCartoons.slice(start, end);
+  cartoonsToLoad.reverse().forEach(cartoon => {
+    addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
+  });
 }
 
 function addLoadMoreButton() {
@@ -72,17 +80,17 @@ function addLoadMoreButton() {
       </svg>
     </div>
   `;
-  
+
   loadMoreButton.addEventListener("click", () => {
     const start = displayedCount;
     displayedCount = Math.min(displayedCount + incrementCount, presetCartoons.length);
     loadCartoons(start, displayedCount);
-    
+
     if (displayedCount >= presetCartoons.length) {
       loadMoreButton.style.display = "none";
     }
   });
-  
+
   buttonContainer.appendChild(loadMoreButton);
   document.querySelector('main').appendChild(buttonContainer);
 }
@@ -102,7 +110,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = '';
   currentCartoons = [];
-  
+
   // Lade die ersten 15 Bilder
   loadCartoons(0, displayedCount);
   addLoadMoreButton();
@@ -147,11 +155,11 @@ function addCartoonToGallery(title, imgSrc, description) {
 function showInLightbox(index) {
   // Wenn wir über das Ende hinausgehen, springen wir zum Anfang
   if (index >= currentCartoons.length) {
-      index = 0;
+    index = 0;
   }
   // Wenn wir unter den Anfang gehen, springen wir zum Ende
   if (index < 0) {
-      index = currentCartoons.length - 1;
+    index = currentCartoons.length - 1;
   }
 
   const cartoon = currentCartoons[index];

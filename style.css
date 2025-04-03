@@ -92,6 +92,7 @@ main {
   border: .5em solid #ffffff;
   transition: all 0.3s ease;
   height: 100%;
+  cursor: pointer;
 }
 .gallery-item:hover {
   transform: scale(1.05);
