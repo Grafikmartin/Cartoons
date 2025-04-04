@@ -1,6 +1,6 @@
 const presetCartoons = [
 
-  
+
   { title: "Profi, durch und durch", src: "cartoons/Prinzip.png", description: "" },
   { title: "Produktvielfalt", src: "cartoons/Produkt.jpg", description: "" },
   { title: "Der Fortschritt ist überall", src: "cartoons/Fortschritt.png", description: "" },
@@ -43,7 +43,7 @@ const presetCartoons = [
   { title: "Zu Befehl!", src: "cartoons/Waesche.png", description: "" },
   { title: "Neue Traditionen", src: "cartoons/Weihnachten.png", description: "" },
   { title: "Irrglaube und Konsequenzen", src: "cartoons/wennAFD.png", description: "" },
-{ title: "Prioritäten ändern sich", src: "cartoons/PrioritaetenAendernSich.png", description: "" },
+  { title: "Prioritäten ändern sich", src: "cartoons/PrioritaetenAendernSich.png", description: "" },
   { title: "Auch aus Gewohnheit!", src: "cartoons/Gewohnheit.png", description: "" },
   { title: "Hohe Kriminalitätsdichte", src: "cartoons/einarmigerBandit.png", description: "" },
   { title: "Kafreitag", src: "cartoons/Kafreitag.png", description: "" },
@@ -81,7 +81,10 @@ const presetCartoons = [
   { title: "Service ist wichtig!", src: "cartoons/service.png", description: "" },
   { title: "Fan bleibt Fan", src: "cartoons/enkelkind.jpg", description: "" }
 ];
-
+document.addEventListener("DOMContentLoaded", () => {
+  const counter = document.getElementById("cartoon-counter");
+  counter.textContent = `${presetCartoons.length} Cartoons vorhanden`;
+});
 let displayedCount = 15;
 const incrementCount = 5;
 
