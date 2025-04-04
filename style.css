@@ -40,20 +40,6 @@ body {
   min-height: 100vh;
 }
 
-  #cartoon-counter {
-    margin: 25px auto 0 auto; /* zentriert */
-    width: fit-content; /* nur so breit wie nötig */
-    background: rgba(255, 255, 255, 0.85);
-    color: #000;
-    padding: 0.5em 1em;
-    border-radius: 999px;
-    font-weight: bold;
-    font-size: 1em;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    z-index: 999;
-    backdrop-filter: blur(4px);
-  }
-
 header {
   width: 100%;
   min-height: 300px;
@@ -269,6 +255,21 @@ footer h3 {
 footer p {
   margin: 0.5em 0;
   line-height: 1.6;
+}
+
+#cartoon-counter {
+  margin: 25px auto 0 auto; /* zentriert */
+  width: fit-content; /* nur so breit wie nötig */
+  background: rgba(255, 255, 255, 0.00);
+  color: #686868;
+  padding: 0.5em 1em;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 999;
+  backdrop-filter: blur(4px);
+  margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 600px) {
