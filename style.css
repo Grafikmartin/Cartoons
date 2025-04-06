@@ -52,10 +52,10 @@ header {
 }
 
 .header-icon {
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   margin-top: 60px;
-  margin-bottom: -20px;
+  margin-bottom: -60px;
   position: relative;
   z-index: 1;
   text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.9);
@@ -64,10 +64,17 @@ header {
 header h1 {
   position: relative;
   z-index: 1;
-  font-size: 3em;
+  font-size: 6em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
-
+header h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 2em;
+  margin-top: -55px;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
 main {
   width: 100%;
   flex: 1;
@@ -252,9 +259,9 @@ main {
   width: 100%;
   padding: 12px;
   font-size: 16px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(96, 37, 37, 0.6);
+  border-radius: 15px;
   cursor: pointer;
   font-family: 'Fredoka', sans-serif;
 }
