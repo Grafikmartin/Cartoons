@@ -238,6 +238,43 @@ main {
   transform: scale(0.95);
 }
 
+
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  position: relative;
+  width: 300px;
+}
+
+.filter-dropdown {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.filter-dropdown option {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.category-count {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+
+
+
+
+
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
