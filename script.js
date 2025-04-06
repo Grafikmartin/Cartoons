@@ -1,7 +1,9 @@
 const presetCartoons = [
 
 
+  { title: "Burnout im Fegefeuer", src: "cartoons/lucifer.webp", description: "" },
   { title: "Profi, durch und durch", src: "cartoons/Prinzip.png", description: "" },
+  { title: "Aber nicht verwechseln!", src: "cartoons/kurzwahl.jpg", description: "" },
   { title: "Produktvielfalt", src: "cartoons/Produkt.jpg", description: "" },
   { title: "Der Fortschritt ist überall", src: "cartoons/Fortschritt.png", description: "" },
   { title: "Mitbewohnerstreit", src: "cartoons/Mitbewohnerstreit.png", description: "" },
@@ -63,7 +65,7 @@ const presetCartoons = [
   { title: "Unter sich", src: "cartoons/Stalking.png", description: "" },
   { title: "Deutungssache", src: "cartoons/Schimmelbildung.png", description: "" },
   { title: "Zukunft", src: "cartoons/zukunft.png", description: "" },
-  { title: "Mode mit Auswirkungen", src: "cartoons/JAWS.png", description: "" },
+  { title: "Mode mit Auswirkung", src: "cartoons/JAWS.png", description: "" },
   { title: "Trumpismus", src: "cartoons/Trumpismus.png", description: "" },
   { title: "Endziel", src: "cartoons/Endziel.png", description: "" },
   { title: "Kleine Hürden", src: "cartoons/KleineHuerden.png", description: "" },
