@@ -379,7 +379,7 @@ const presetCartoons = [
     categories: ["Essen & Trinken", "Service & Dienstleistung"],
   },
   {
-    title: "Echte Männersache",
+    title: "Y-Chromosom-Challenge",
     src: "cartoons/zahnbuerste.png",
     description: "",
     categories: ["Technik & Fortschritt", "Gesundheit & Körper"],
@@ -475,7 +475,7 @@ const presetCartoons = [
     categories: ["Zwischenmenschliches", "Unbequeme Wahrheiten"],
   },
   {
-    title: "Wahrheitsgetreu",
+    title: "Fallschirm nicht vergessen!",
     src: "cartoons/wahrheitsgetreu.png",
     description: "",
     categories: ["Wirtschaft & Konsum", "Feiertage & Religion"],
