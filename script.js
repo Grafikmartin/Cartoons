@@ -67,7 +67,7 @@ const presetCartoons = [
     categories: ["Sport & Fitness"],
   },
   {
-    title: "Diagnostik",
+    title: "Duale Diagnostik",
     src: "cartoons/Diagnostik.png",
     description: "",
     categories: ["Gesundheit & Körper", "Technik & Fortschritt", "Zukunftsängste"],
@@ -109,7 +109,7 @@ const presetCartoons = [
     categories: ["Beruf & Arbeit", "Zwischenmenschliches"],
   },
   {
-    title: "Belagerung",
+    title: "Strandkorb-Thriller",
     src: "cartoons/Belagerung.jpg",
     description: "",
     categories: ["Unbequeme Wahrheiten", "Echte Klassiker"],
