@@ -35,12 +35,7 @@ const presetCartoons = [
     description: "",
     categories: ["Beruf & Arbeit", "Service & Dienstleistung"],
   },
-  {
-    title: "Aber nicht verwechseln!",
-    src: "cartoons/kurzwahl.jpg",
-    description: "",
-    categories: ["Gesellschaft & Politik", "Technik & Fortschritt", "Service & Dienstleistung", "Zukunftsängste"],
-  },
+ 
   {
     title: "Produktvielfalt",
     src: "cartoons/Produkt.jpg",
@@ -496,6 +491,12 @@ const presetCartoons = [
     src: "cartoons/privilegierte.png",
     description: "",
     categories: ["Systemkritisch charmant", "Gesellschaft & Politik", "Wirtschaft & Konsum"],
+  },
+  {
+    title: "Aber nicht verwechseln!",
+    src: "cartoons/kurzwahl.jpg",
+    description: "",
+    categories: ["Gesellschaft & Politik", "Technik & Fortschritt", "Service & Dienstleistung", "Zukunftsängste"],
   },
   {
     title: "Service ist wichtig!",
