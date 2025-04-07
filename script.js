@@ -37,6 +37,12 @@ const presetCartoons = [
   },
  
   {
+    title: "Bitte klar und sachlich!",
+    src: "cartoons/dingsbum.jpg", 
+    description: "",
+    categories: ["Technik & Fortschritt", "Beruf & Arbeit",],
+  },
+  {
     title: "Produktvielfalt",
     src: "cartoons/Produkt.jpg",
     description: "",
