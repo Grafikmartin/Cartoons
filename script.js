@@ -505,7 +505,7 @@ const presetCartoons = [
     categories: ["Beruf & Arbeit", "Service & Dienstleistung"],
   },
   {
-    title: "Fan bleibt Fan",
+    title: "Senior Groupie Emerita",
     src: "cartoons/enkelkind.jpg",
     description: "",
     categories: ["Gesundheit & Körper", "Zwischenmenschliches"],
