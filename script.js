@@ -24,10 +24,16 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Ethnologieforschung",
+    src: "cartoons/eierbrauch.webp",
+    description: "",
+    categories: ["Feiertage & Religion"],
+  },
+    {
     title: "Burnout im Fegefeuer",
     src: "cartoons/lucifer.webp",
     description: "",
-    categories: ["Beruf & Arbeit", "Gesellschaft & Politik", "Höllisch gut", "Sinnkrisen & Donuts"],
+    categories: ["Beruf & Arbeit", "Gesellschaft & Politik", "Feiertage & Religion", "Höllisch gut", "Sinnkrisen & Donuts"],
   },
   {
     title: "Profi, durch und durch",
