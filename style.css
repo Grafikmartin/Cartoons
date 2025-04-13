@@ -219,7 +219,7 @@ main {
 
 .cssbuttons-io-button:hover {
   transform: scale(1.05);
-  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.55);
 }
 
 .cssbuttons-io-button .icon {
