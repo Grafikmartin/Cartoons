@@ -24,6 +24,12 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Gewiissenhafte Voraussicht",
+    src: "cartoons/future.webp",
+    description: "",
+    categories: ["Umwelt & Klima"],
+  },
+  {
     title: "Ethnologieforschung",
     src: "cartoons/eierbrauch.webp",
     description: "",
