@@ -24,7 +24,7 @@ const categories = {
 };
 const presetCartoons = [
   {
-    title: "Gewiissenhafte Voraussicht",
+    title: "Sorgfältige Zukunftsplanung",
     src: "cartoons/future.webp",
     description: "",
     categories: ["Umwelt & Klima"],
