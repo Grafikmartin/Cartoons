@@ -560,6 +560,11 @@ const presetCartoons = [
   },
 ];
 
+// Variablen für die "Load More"-Funktionalität
+let displayedCount = 30; // Initial 30 Cartoons anzeigen
+const incrementCount = 10; // 10 weitere bei jedem Klick laden
+let currentFilteredCartoons = []; // Aktuelle gefilterte Cartoons
+
 // Funktion zum Initialisieren des Filters
 function initializeFilter() {
   const filterSelect = document.getElementById('categoryFilter');
@@ -588,81 +593,74 @@ function initializeFilter() {
 function filterCartoons(selectedCategory) {
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = ''; // Lösche aktuelle Anzeige
-
-  const filteredCartoons = selectedCategory === 'all'
+  
+  // Filtere Cartoons nach Kategorie
+  currentFilteredCartoons = selectedCategory === 'all'
     ? presetCartoons
     : presetCartoons.filter(cartoon =>
       cartoon.categories && cartoon.categories.includes(selectedCategory)
     );
-
-  filteredCartoons.forEach(cartoon => {
+  
+  // Zeige nur die ersten displayedCount Cartoons an
+  const cartoonsToShow = currentFilteredCartoons.slice(0, displayedCount);
+  
+  cartoonsToShow.forEach(cartoon => {
     addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
   });
 
   // Update counter
-  const counter = document.getElementById("cartoon-counter");
-  counter.textContent = `${filteredCartoons.length} Cartoons angezeigt`;
+  updateCounter();
+  
+  // Update die Sichtbarkeit des "Mehr laden"-Buttons
+  updateLoadMoreButton();
 }
 
-let displayedCount = 15;
-const incrementCount = 5;
+// Funktion zum Aktualisieren des Zählers
+function updateCounter() {
+  const counter = document.getElementById("cartoon-counter");
+  const gallery = document.getElementById("gallery");
+  const count = gallery.children.length;
+  counter.textContent = `${count} Cartoons angezeigt`;
+}
+
+// Funktion zum Aktualisieren des "Mehr laden"-Buttons
+function updateLoadMoreButton() {
+  const loadMoreBtn = document.getElementById("load-more-btn");
+  
+  // Zeige den Button nur, wenn es mehr zu laden gibt
+  if (displayedCount >= currentFilteredCartoons.length) {
+    loadMoreBtn.style.display = "none";
+  } else {
+    loadMoreBtn.style.display = "block";
+  }
+}
 
 // Event Listener für DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   initializeFilter(); // Initialisiere den Filter
+  
+  // Zurücksetzen des displayedCount und currentFilteredCartoons
+  displayedCount = 30;
+  currentFilteredCartoons = presetCartoons;
 
   // Füge Event Listener für Filter hinzu
   document.getElementById('categoryFilter').addEventListener('change', (e) => {
+    displayedCount = 30; // Setze zurück auf 30 bei Kategorienwechsel
     filterCartoons(e.target.value);
+  });
+
+  // Füge Event Listener für "Mehr laden"-Button hinzu
+  document.getElementById('load-more-btn').addEventListener('click', () => {
+    displayedCount += incrementCount; // Erhöhe die Anzahl anzuzeigender Cartoons
+    
+    // Zeige die aktuelle Kategorie neu an
+    const selectedCategory = document.getElementById('categoryFilter').value;
+    filterCartoons(selectedCategory);
   });
 
   // Zeige initial alle Cartoons
   filterCartoons('all');
 });
-
-function loadCartoons(start, end) {
-  const cartoonsToLoad = presetCartoons.slice(start, end);
-  cartoonsToLoad.forEach(cartoon => {
-    addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
-  });
-}
-
-function addLoadMoreButton() {
-  const existingButton = document.querySelector('.cssbuttons-io-button');
-  if (existingButton) {
-    existingButton.remove();
-  }
-
-  const buttonContainer = document.createElement("div");
-  buttonContainer.style.width = "100%";
-  buttonContainer.style.textAlign = "center";
-  buttonContainer.style.margin = "2em 0";
-
-  const loadMoreButton = document.createElement("button");
-  loadMoreButton.className = "cssbuttons-io-button";
-  loadMoreButton.innerHTML = `
-    Weitere Cartoons anzeigen
-    <div class="icon">
-      <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2" fill="none"></path>
-      </svg>
-    </div>
-  `;
-
-  loadMoreButton.addEventListener("click", () => {
-    const start = displayedCount;
-    displayedCount = Math.min(displayedCount + incrementCount, presetCartoons.length);
-    loadCartoons(start, displayedCount);
-
-    if (displayedCount >= presetCartoons.length) {
-      loadMoreButton.style.display = "none";
-    }
-  });
-
-  buttonContainer.appendChild(loadMoreButton);
-  document.querySelector('main').appendChild(buttonContainer);
-}
 
 let currentIndex = -1;
 let currentCartoons = [];

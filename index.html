@@ -9,28 +9,28 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
-
-</head>
+  </head>
 <body>
  
+  <header class="container">
+    <img src="./assets/Iconsmind-Outline-Laughing.256.png" alt="Lachen Icon" class="header-icon">
+    <h1>Pixelwitze</h1>
+    <h2>Lachen auf Knopfdruck</h2>
+  </header>
 
- <header  class="container">
-  
-  <img src="./assets/Iconsmind-Outline-Laughing.256.png" alt="Lachen Icon" class="header-icon">
-  <h1>Pixelwitze</h1>
-  <h2>Lachen auf Knopfdruck</h3>
-</header>
-
-<div class="filter-container">
-  <select class="filter-dropdown" id="categoryFilter">
-    <option value="all">Alle Kategorien</option>
-  </select>
-</div>
+  <div class="filter-container">
+    <select class="filter-dropdown" id="categoryFilter">
+      <option value="all">Alle Kategorien</option>
+    </select>
+  </div>
 
   <main>
     <section class="gallery" id="gallery">
       <!-- Dynamisch eingefügte Cartoons -->
     </section>
+    <div class="load-more-container">
+      <button id="load-more-btn">Mehr Cartoons laden</button>
+    </div>
   </main>
 
   <div class="lightbox" id="lightbox">
@@ -40,20 +40,19 @@
     </div>
     <span class="close" id="close"><span class="material-icons">close</span></span>
     
-  
     <img id="lightbox-img" src="" alt="">
     <div class="info">
       <h2 id="lightbox-title"></h2>
       <p id="lightbox-description"></p>
     </div>
   </div>
-<footer>
-  <h3>Betreten auf eigene Gefahr!</h3>
-
-  <p>Zusammengetragen wurde das Ganze mit viel Liebe (und übermäßigem Koffeinkonsum) von Martin Borth.
-    Die eigentlichen Meisterwerke gehören natürlich ihren grandiosen Schöpfern.</p>
+  
+  <footer>
+    <h3>Betreten auf eigene Gefahr!</h3>
+    <p>Zusammengetragen wurde das Ganze mit viel Liebe (und übermäßigem Koffeinkonsum) von Martin Borth.
+      Die eigentlichen Meisterwerke gehören natürlich ihren grandiosen Schöpfern.</p>
     <div id="cartoon-counter">0 Cartoons angezeigt</div>
-</footer>
+  </footer>
 
   <script src="script.js"></script>
 </body>
