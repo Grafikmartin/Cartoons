@@ -618,9 +618,7 @@ function filterCartoons(selectedCategory) {
 // Funktion zum Aktualisieren des Zählers
 function updateCounter() {
   const counter = document.getElementById("cartoon-counter");
-  const gallery = document.getElementById("gallery");
-  const count = gallery.children.length;
-  counter.textContent = `${count} Cartoons angezeigt`;
+  counter.textContent = `${presetCartoons.length} Cartoons insgesamt`;
 }
 
 // Funktion zum Aktualisieren des "Mehr laden"-Buttons
