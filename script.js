@@ -26,7 +26,7 @@ const categories = {
 };
 const presetCartoons = [
   {
-    title: "Nummer Eins war schnell erledigt",
+    title: "Sonderwünsche",
     src: "cartoons/Fee.webp",
     description: "",
     categories: ["Zwischenmenschliches", "Service & Dienstleistung","Randale & Romantik"],
@@ -351,7 +351,7 @@ const presetCartoons = [
     categories: ["Gesellschaft & Politik", "Wirtschaft & Konsum"],
   },
   {
-    title: "Kafreitag",
+    title: "Karfreitag",
     src: "cartoons/Kafreitag.png",
     description: "",
     categories: ["Feiertage & Religion", "Zwischenmenschliches"],
@@ -381,7 +381,7 @@ const presetCartoons = [
     categories: ["Gesellschaft & Politik", "Service & Dienstleistung"],
   },
   {
-    title: "weitsichtig",
+    title: "Weitsichtig",
     src: "cartoons/weitsichtig.png",
     description: "",
     categories: ["Randale & Romantik"],
