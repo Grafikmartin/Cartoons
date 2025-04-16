@@ -1,4 +1,6 @@
-// Definiere zuerst die verfügbaren Kategorien
+const fullscreenIcon = document.getElementById('fullscreenIcon');
+const fullscreenToggle = document.getElementById('fullscreenToggle');// Definiere zuerst die verfügbaren Kategorien
+
 const categories = {
   "Beruf & Arbeit": [],
   "Gesellschaft & Politik": [],
@@ -559,6 +561,16 @@ const presetCartoons = [
     categories: ["Gesundheit & Körper", "Zwischenmenschliches"],
   },
 ];
+
+fullscreenToggle.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+    fullscreenIcon.textContent = 'fullscreen_exit';
+  } else {
+    document.exitFullscreen();
+    fullscreenIcon.textContent = 'fullscreen';
+  }
+});
 
 // Variablen für die "Load More"-Funktionalität
 let displayedCount = 30; // Initial 30 Cartoons anzeigen

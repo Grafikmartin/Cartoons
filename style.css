@@ -39,6 +39,26 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.fullscreen-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.fullscreen-icon:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.material-icons {
+  color: white;
+  font-size: 32px;
+}
 
 header {
   width: 100%;
