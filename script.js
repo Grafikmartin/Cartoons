@@ -24,6 +24,36 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Nummer Eins war schnell erledigt",
+    src: "cartoons/Fee.webp",
+    description: "",
+    categories: ["Zwischenmenschliches", "Service & Dienstleistung","Randale & Romantik"],
+  },
+  {
+    title: "Bitte Vorsicht!",
+    src: "cartoons/Uebergangsjacke.webp",
+    description: "",
+    categories: [ "Wirtschaft & Konsum"],
+  },
+  {
+    title: "Das Luxusproblem der Arbeiterklasse",
+    src: "cartoons/Zeitumstellung.webp",
+    description: "",
+    categories: ["Gesellschaft & Politik"],
+  },
+  {
+    title: "404: Diskretion nicht gefunden",
+    src: "cartoons/Mutter.webp",
+    description: "",
+    categories: ["Zwischenmenschliches", "Für Fortgeschrittene"],
+  },
+  {
+    title: "Gemüse des Grauens",
+    src: "cartoons/Rucula.webp",
+    description: "",
+    categories: [ "Höllisch gut"],
+  },
+  {
     title: "Sorgfältige Zukunftsplanung",
     src: "cartoons/future.webp",
     description: "",
