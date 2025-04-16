@@ -26,6 +26,12 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Der Lauf der Dinge",
+    src: "cartoons/Truth.webp",
+    description: "",
+    categories: ["Technik & Fortschritt", "Wirtschaft & Konsum",  "Sinnkrisen & Donuts", "Sport & Fitness"],
+  },
+  {
     title: "Sonderwünsche",
     src: "cartoons/Fee.webp",
     description: "",
