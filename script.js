@@ -26,6 +26,24 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Osterbesuch",
+    src: "cartoons/Osterbesuch.webp",
+    description: "",
+    categories: ["Feiertage & Religion"],
+  },
+  {
+    title: "Nur Überflüssiges",
+    src: "cartoons/ikea.webp",
+    description: "",
+    categories: ["Wirtschaft & Konsum", "Randale & Romantik"],
+  },
+  {
+    title: "Nur für Frauen!",
+    src: "cartoons/Kontrolle.webp",
+    description: "",
+    categories: ["Echte Klassiker", "Zwischenmenschliches", "Unbequeme Wahrheiten"],
+  },  
+  {
     title: "Der Lauf der Dinge",
     src: "cartoons/Truth.webp",
     description: "",
