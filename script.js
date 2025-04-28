@@ -26,6 +26,24 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Effizienzsteigerung",
+    src: "cartoons/Optimierung.webp",
+    description: "",
+    categories: ["Beruf & Arbeit", "Gesundheit & Körper"],
+  },
+  {
+    title: "Resümee",
+    src: "cartoons/Sinn.webp",
+    description: "",
+    categories: ["Wirtschaft & Konsum", "Randale & Romantik","Zwischenmenschliches", "Beruf & Arbeit"],
+  },
+  {
+    title: "Sicher ist sicher!",
+    src: "cartoons/Anreiz.webp",
+    description: "",
+    categories: ["Gesundheit & Körper", "Zwischenmenschliches", "Gesellschaft & Politik"],
+  }, 
+  {
     title: "Osterbesuch",
     src: "cartoons/Osterbesuch.webp",
     description: "",
