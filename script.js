@@ -26,6 +26,12 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Mondphasen",
+    src: "cartoons/Mond.webp",
+    description: "",
+    categories: ["Randale & Romantik", "Zwischenmenschliches"],
+  },
+  {
     title: "Effizienzsteigerung",
     src: "cartoons/Optimierung.webp",
     description: "",
