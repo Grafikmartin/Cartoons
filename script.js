@@ -27,10 +27,10 @@ const categories = {
 const presetCartoons = [
 
   {
-    title: "Ohne Worte",
-    src: "cartoons/Ostern.webp",
+    title: "Neuer Umweg",
+    src: "cartoons/Probleme.webp",
     description: "",
-    categories: ["Feiertage & Religion"],
+    categories: ["Feiertage & Religion", "Technik & Fortschritt"],
   },
   {
     title: "Sicherheitsministers Wunschtraum",
