@@ -27,7 +27,7 @@ const categories = {
 const presetCartoons = [
 
   {
-    title: "Neuer Umweg",
+    title: "Neue Wege",
     src: "cartoons/Probleme.webp",
     description: "",
     categories: ["Feiertage & Religion", "Technik & Fortschritt"],
