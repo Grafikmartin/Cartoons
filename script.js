@@ -32,6 +32,24 @@ const presetCartoons = [
     categories: ["Randale & Romantik", "Zwischenmenschliches"],
   },
   {
+    title: "Mondphasen",
+    src: "cartoons/Mond.webp",
+    description: "",
+    categories: ["Randale & Romantik", "Zwischenmenschliches"],
+  },
+  {
+    title: "Rarität",
+    src: "cartoons/Raritaet.webp",
+    description: "",
+    categories: ["Service & Dienstleistung","Technik & Fortschritt"],
+  },
+  {
+    title: "Mondphasen",
+    src: "cartoons/Mond.webp",
+    description: "",
+    categories: ["Randale & Romantik", "Zwischenmenschliches"],
+  },
+  {
     title: "Effizienzsteigerung",
     src: "cartoons/Optimierung.webp",
     description: "",
