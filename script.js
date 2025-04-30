@@ -26,14 +26,14 @@ const categories = {
 };
 const presetCartoons = [
   {
-    title: "Mondphasen",
-    src: "cartoons/Mond.webp",
+    title: "Ohne Worte",
+    src: "cartoons/Ostern.webp",
     description: "",
-    categories: ["Randale & Romantik", "Zwischenmenschliches"],
+    categories: ["Feiertage & Religion"],
   },
   {
-    title: "Mondphasen",
-    src: "cartoons/Mond.webp",
+    title: "Ungewohntes Bedienkonzept",
+    src: "cartoons/Pause.webp",
     description: "",
     categories: ["Randale & Romantik", "Zwischenmenschliches"],
   },
