@@ -25,6 +25,26 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
+
+  {
+    title: "Ohne Worte",
+    src: "cartoons/Ostern.webp",
+    description: "",
+    categories: ["Feiertage & Religion"],
+  },
+  {
+    title: "Ohne Worte",
+    src: "cartoons/Ostern.webp",
+    description: "",
+    categories: ["Feiertage & Religion"],
+  },
+  {
+    title: "Hohe Auslastung",
+    src: "cartoons/Italiener.webp",
+    description: "",
+    categories: ["Essen & Trinken"],
+  },
+
   {
     title: "Ohne Worte",
     src: "cartoons/Ostern.webp",
