@@ -26,6 +26,12 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Ohne Worte",
+    src: "cartoons/Eichhoernchen.webp",
+    description: "",
+    categories: ["Umwelt & Klima"],
+  },
+  {
     title: "Stressabbau",
     src: "cartoons/seeadler.webp",
     description: "",
