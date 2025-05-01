@@ -27,6 +27,12 @@ const categories = {
 const presetCartoons = [
 
   {
+    title: "Was sonst?",
+    src: "cartoons/Gattin.webp",
+    description: "",
+    categories: ["Randale & Romantik"],
+  },
+  {
     title: "Neue Wege",
     src: "cartoons/Probleme.webp",
     description: "",
