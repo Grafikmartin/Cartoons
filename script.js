@@ -33,7 +33,7 @@ const presetCartoons = [
     categories: ["Randale & Romantik"],
   },
   {
-    title: "Neue Wege",
+    title: "Neue Hindernisse",
     src: "cartoons/Probleme.webp",
     description: "",
     categories: ["Feiertage & Religion", "Technik & Fortschritt"],
