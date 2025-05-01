@@ -25,7 +25,12 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
-
+  {
+    title: "Stressabbau",
+    src: "cartoons/seeadler.webp",
+    description: "",
+    categories: ["Umwelt & Klima"],
+  },
   {
     title: "Was sonst?",
     src: "cartoons/Gattin.webp",
