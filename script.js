@@ -25,6 +25,12 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
+ {
+    title: "Gitarrenvirtuose",
+    src: "cartoons/Luftgitarre.webp",
+    description: "",
+    categories: ["Umwelt & Klima"],
+  },
   {
     title: "Ohne Worte",
     src: "cartoons/Eichhoernchen.webp",
