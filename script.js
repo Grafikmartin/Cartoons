@@ -25,7 +25,13 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
- {
+  {
+    title: "Sprechstunde per Smartphone",
+    src: "cartoons/Sprechstunde.webp",
+    description: "",
+    categories: ["Technik & Fortschritt", "Gesundheit & Körper"],
+  },
+  {
     title: "Gitarrenvirtuose",
     src: "cartoons/Luftgitarre.webp",
     description: "",
