@@ -26,6 +26,12 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Herbert, unser Held!",
+    src: "cartoons/Herbert.webp",
+    description: "",
+    categories: ["Beruf & Arbeit", "Echte Klassiker"],
+  },
+  {
     title: "Ohne Worte",
     src: "cartoons/Balett.webp",
     description: "",
