@@ -26,6 +26,12 @@ const categories = {
 };
 const presetCartoons = [
   {
+    title: "Ohne Worte",
+    src: "cartoons/Balett.webp",
+    description: "",
+    categories: ["Gesellschaft & Politik", "Sinnkrisen & Donuts"],
+  },
+  {
     title: "Sprechstunde per Smartphone",
     src: "cartoons/Sprechstunde.webp",
     description: "",
