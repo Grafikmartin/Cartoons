@@ -433,7 +433,7 @@ footer p {
     font-size: 1.8rem;
     margin: 5px 0;
     z-index: 1; /* Lower z-index than logo */
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   header h2 {
