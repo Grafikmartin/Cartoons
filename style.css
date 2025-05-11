@@ -412,25 +412,34 @@ footer p {
   }
 }
 /* Add these responsive header styles */
+/* Modify the mobile header styles to fix z-index and positioning */
 @media screen and (max-width: 480px) {
   header.container {
     flex-direction: column;
     padding: 10px;
     gap: 5px;
+    min-height: auto;
   }
 
   .header-icon {
     width: 60px;
     height: 60px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    z-index: 2; /* Ensure logo is above text */
   }
 
   header h1 {
     font-size: 1.8rem;
     margin: 5px 0;
+    z-index: 1; /* Lower z-index than logo */
+    margin-top: 0;
   }
 
   header h2 {
     font-size: 1rem;
-    margin: 0;
+    margin: 0 0 15px 0;
+    z-index: 1; /* Lower z-index than logo */
+    margin-top: 0;
   }
 }
