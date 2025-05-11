@@ -411,3 +411,26 @@ footer p {
     max-height: 60%;
   }
 }
+/* Add these responsive header styles */
+@media screen and (max-width: 480px) {
+  header.container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .header-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    margin: 5px 0;
+  }
+
+  header h2 {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
