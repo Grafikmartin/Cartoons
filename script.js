@@ -26,7 +26,7 @@ const categories = {
 };
 const presetCartoons = [
     {
-    title: "Selektion im Sanitärbereich",
+    title: "Separation im Sanitärbereich",
     src: "cartoons/Trennung.webp",
     description: "",
     categories: ["Randale & Romantik", "Zwischenmenschliches",],
