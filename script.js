@@ -25,6 +25,12 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
+    {
+    title: "Selektion im Sanitärbereich",
+    src: "cartoons/Trennung.webp",
+    description: "",
+    categories: ["Randale & Romantik", "Zwischenmenschliches",],
+  },
   {
     title: "Herbert, unser Held!",
     src: "cartoons/Herbert.webp",
