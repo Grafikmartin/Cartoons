@@ -25,6 +25,12 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
+     {
+    title: "Klare Ursache",
+    src: "cartoons/Single.webp",
+    description: "",
+    categories: ["Randale & Romantik", "Zwischenmenschliches",],
+  },
     {
     title: "Separation im Sanitärbereich",
     src: "cartoons/Trennung.webp",
