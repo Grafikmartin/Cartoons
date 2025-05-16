@@ -25,6 +25,12 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
+      {
+    title: "Transplantations-Tiefschlag",
+    src: "cartoons/Transplantation.webp",
+    description: "",
+    categories: [  "Gesundheit & Körper",],
+  },
      {
     title: "Klare Ursache",
     src: "cartoons/Single.webp",
