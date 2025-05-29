@@ -25,6 +25,12 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
+        {
+    title: "Neue Ansage!",
+    src: "cartoons/NeueAnsage.webp",
+    description: "",
+    categories: [ "Gesellschaft & Politik",],
+  },
       {
     title: "Transplantations-Tiefschlag",
     src: "cartoons/Transplantation.webp",
