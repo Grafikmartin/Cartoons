@@ -25,25 +25,31 @@ const categories = {
   "Essen & Trinken": [],
 };
 const presetCartoons = [
-        {
+  {
+    title: "",
+    src: "cartoons/ki.webp",
+    description: "",
+    categories: ["Beruf & Arbeit",],
+  }, 
+  {
     title: "Neue Ansage!",
     src: "cartoons/NeueAnsage.webp",
     description: "",
-    categories: [ "Gesellschaft & Politik",],
+    categories: ["Gesellschaft & Politik",],
   },
-      {
+  {
     title: "Transplantations-Tiefschlag",
     src: "cartoons/Transplantation.webp",
     description: "",
-    categories: [  "Gesundheit & Körper",],
+    categories: ["Gesundheit & Körper",],
   },
-     {
+  {
     title: "Klare Ursache",
     src: "cartoons/Single.webp",
     description: "",
     categories: ["Randale & Romantik", "Zwischenmenschliches",],
   },
-    {
+  {
     title: "Separation im Sanitärbereich",
     src: "cartoons/Trennung.webp",
     description: "",
@@ -101,7 +107,7 @@ const presetCartoons = [
     title: "Sicherheitsministers Wunschtraum",
     src: "cartoons/sicherheit.webp",
     description: "",
-    categories: ["Gesellschaft & Politik",  "Technik & Fortschritt"],
+    categories: ["Gesellschaft & Politik", "Technik & Fortschritt"],
   },
   {
     title: "Hohe Auslastung",
@@ -126,7 +132,7 @@ const presetCartoons = [
     title: "Rarität",
     src: "cartoons/Raritaet.webp",
     description: "",
-    categories: ["Service & Dienstleistung","Technik & Fortschritt"],
+    categories: ["Service & Dienstleistung", "Technik & Fortschritt"],
   },
   {
     title: "Mondphasen",
@@ -144,14 +150,14 @@ const presetCartoons = [
     title: "Resümee",
     src: "cartoons/Sinn.webp",
     description: "",
-    categories: ["Wirtschaft & Konsum", "Randale & Romantik","Zwischenmenschliches", "Beruf & Arbeit"],
+    categories: ["Wirtschaft & Konsum", "Randale & Romantik", "Zwischenmenschliches", "Beruf & Arbeit"],
   },
   {
     title: "Sicher ist sicher!",
     src: "cartoons/Anreiz.webp",
     description: "",
     categories: ["Gesundheit & Körper", "Zwischenmenschliches", "Gesellschaft & Politik"],
-  }, 
+  },
   {
     title: "Osterbesuch",
     src: "cartoons/Osterbesuch.webp",
@@ -169,24 +175,24 @@ const presetCartoons = [
     src: "cartoons/Kontrolle.webp",
     description: "",
     categories: ["Echte Klassiker", "Zwischenmenschliches", "Unbequeme Wahrheiten"],
-  },  
+  },
   {
     title: "Der Lauf der Dinge",
     src: "cartoons/Truth.webp",
     description: "",
-    categories: ["Technik & Fortschritt", "Wirtschaft & Konsum",  "Sinnkrisen & Donuts", "Sport & Fitness"],
+    categories: ["Technik & Fortschritt", "Wirtschaft & Konsum", "Sinnkrisen & Donuts", "Sport & Fitness"],
   },
   {
     title: "Sonderwünsche",
     src: "cartoons/Fee.webp",
     description: "",
-    categories: ["Zwischenmenschliches", "Service & Dienstleistung","Randale & Romantik"],
+    categories: ["Zwischenmenschliches", "Service & Dienstleistung", "Randale & Romantik"],
   },
   {
     title: "Bitte Vorsicht!",
     src: "cartoons/Uebergangsjacke.webp",
     description: "",
-    categories: [ "Wirtschaft & Konsum"],
+    categories: ["Wirtschaft & Konsum"],
   },
   {
     title: "Das Luxusproblem der Arbeiterklasse",
@@ -204,7 +210,7 @@ const presetCartoons = [
     title: "Gemüse des Grauens",
     src: "cartoons/Rucula.webp",
     description: "",
-    categories: [ "Höllisch gut"],
+    categories: ["Höllisch gut"],
   },
   {
     title: "Sorgfältige Zukunftsplanung",
@@ -218,7 +224,7 @@ const presetCartoons = [
     description: "",
     categories: ["Feiertage & Religion"],
   },
-    {
+  {
     title: "Burnout im Fegefeuer",
     src: "cartoons/lucifer.webp",
     description: "",
@@ -230,10 +236,10 @@ const presetCartoons = [
     description: "",
     categories: ["Beruf & Arbeit", "Service & Dienstleistung"],
   },
- 
+
   {
     title: "Bitte klar und sachlich!",
-    src: "cartoons/dingsbum.jpg", 
+    src: "cartoons/dingsbum.jpg",
     description: "",
     categories: ["Technik & Fortschritt", "Beruf & Arbeit",],
   },
@@ -394,7 +400,7 @@ const presetCartoons = [
     categories: ["Feiertage & Religion"],
   },
   {
-    title: "Natur",
+    title: "Ausflug",
     src: "cartoons/Hilbring_Hoden-600x600.jpg",
     description: "",
     categories: ["Zwischenmenschliches", "Echte Klassiker"],
@@ -756,24 +762,24 @@ function initializeFilter() {
 function filterCartoons(selectedCategory) {
   const gallery = document.getElementById("gallery");
   gallery.innerHTML = ''; // Lösche aktuelle Anzeige
-  
+
   // Filtere Cartoons nach Kategorie
   currentFilteredCartoons = selectedCategory === 'all'
     ? presetCartoons
     : presetCartoons.filter(cartoon =>
       cartoon.categories && cartoon.categories.includes(selectedCategory)
     );
-  
+
   // Zeige nur die ersten displayedCount Cartoons an
   const cartoonsToShow = currentFilteredCartoons.slice(0, displayedCount);
-  
+
   cartoonsToShow.forEach(cartoon => {
     addCartoonToGallery(cartoon.title, cartoon.src, cartoon.description);
   });
 
   // Update counter
   updateCounter();
-  
+
   // Update die Sichtbarkeit des "Mehr laden"-Buttons
   updateLoadMoreButton();
 }
@@ -787,7 +793,7 @@ function updateCounter() {
 // Funktion zum Aktualisieren des "Mehr laden"-Buttons
 function updateLoadMoreButton() {
   const loadMoreBtn = document.getElementById("load-more-btn");
-  
+
   // Zeige den Button nur, wenn es mehr zu laden gibt
   if (displayedCount >= currentFilteredCartoons.length) {
     loadMoreBtn.style.display = "none";
@@ -799,7 +805,7 @@ function updateLoadMoreButton() {
 // Event Listener für DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   initializeFilter(); // Initialisiere den Filter
-  
+
   // Zurücksetzen des displayedCount und currentFilteredCartoons
   displayedCount = 30;
   currentFilteredCartoons = presetCartoons;
@@ -813,7 +819,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Füge Event Listener für "Mehr laden"-Button hinzu
   document.getElementById('load-more-btn').addEventListener('click', () => {
     displayedCount += incrementCount; // Erhöhe die Anzahl anzuzeigender Cartoons
-    
+
     // Zeige die aktuelle Kategorie neu an
     const selectedCategory = document.getElementById('categoryFilter').value;
     filterCartoons(selectedCategory);
